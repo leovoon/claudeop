@@ -1,6 +1,8 @@
-# claudeop
+[中文](README_CN.md) | # claudeop
 
 Launch Claude Code CLI with **free OpenRouter models** — no Anthropic subscription required.
+
+![demo](demo.jpg)
 
 A tiny shell wrapper that:
 - Fetches all free models from OpenRouter live
