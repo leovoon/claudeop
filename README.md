@@ -1,4 +1,6 @@
-[中文](README_CN.md) | # claudeop
+[中文](README_CN.md)
+
+#Claudeop
 
 Launch Claude Code CLI with **free OpenRouter models** — no Anthropic subscription required.
 
