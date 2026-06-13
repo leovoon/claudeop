@@ -178,7 +178,10 @@ claudeop() {
   ANTHROPIC_API_KEY="" \
   ANTHROPIC_BASE_URL="https://openrouter.ai/api" \
   ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY" \
-  CLAUDE_CODE_MODEL_OVERRIDE="$model" \
+  ANTHROPIC_DEFAULT_OPUS_MODEL="$model" \
+  ANTHROPIC_DEFAULT_SONNET_MODEL="$model" \
+  ANTHROPIC_DEFAULT_HAIKU_MODEL="$model" \
+  CLAUDE_CODE_SUBAGENT_MODEL="$model" \
   claude "${args[@]}"
 }
 ```
@@ -239,7 +242,10 @@ claudeop
        ANTHROPIC_BASE_URL = https://openrouter.ai/api
        ANTHROPIC_AUTH_TOKEN = your OpenRouter key
        ANTHROPIC_API_KEY = "" (blanked to prevent conflict)
-       CLAUDE_CODE_MODEL_OVERRIDE = the model you picked
+       ANTHROPIC_DEFAULT_OPUS_MODEL = the model you picked
+       ANTHROPIC_DEFAULT_SONNET_MODEL = the model you picked
+       ANTHROPIC_DEFAULT_HAIKU_MODEL = the model you picked
+       CLAUDE_CODE_SUBAGENT_MODEL = the model you picked
 ```
 
 Your shell environment is **never modified**. The env vars only exist inside that single Claude Code process. When it exits, they're gone.

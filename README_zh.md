@@ -176,7 +176,10 @@ claudeop() {
   ANTHROPIC_API_KEY="" \
   ANTHROPIC_BASE_URL="https://openrouter.ai/api" \
   ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY" \
-  CLAUDE_CODE_MODEL_OVERRIDE="$model" \
+  ANTHROPIC_DEFAULT_OPUS_MODEL="$model" \
+  ANTHROPIC_DEFAULT_SONNET_MODEL="$model" \
+  ANTHROPIC_DEFAULT_HAIKU_MODEL="$model" \
+  CLAUDE_CODE_SUBAGENT_MODEL="$model" \
   claude "${args[@]}"
 }
 ```
@@ -237,7 +240,10 @@ claudeop
        ANTHROPIC_BASE_URL = https://openrouter.ai/api
        ANTHROPIC_AUTH_TOKEN = 你的 OpenRouter 密钥
        ANTHROPIC_API_KEY = ""（置空以避免冲突）
-       CLAUDE_CODE_MODEL_OVERRIDE = 你选择的模型
+       ANTHROPIC_DEFAULT_OPUS_MODEL = 你选择的模型
+       ANTHROPIC_DEFAULT_SONNET_MODEL = 你选择的模型
+       ANTHROPIC_DEFAULT_HAIKU_MODEL = 你选择的模型
+       CLAUDE_CODE_SUBAGENT_MODEL = 你选择的模型
 ```
 
 你的 Shell 环境**永远不会被修改**。这些环境变量只存在于那个 Claude Code 进程中。退出时就消失了。
